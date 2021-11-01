@@ -1,0 +1,11 @@
+<h2 id="ngFor">ngFor Heroes</h2>
+<div class="box">
+    <div *ngFor="let hero of heroes">{{hero.id}} - {{hero.name}} - {{hero.emotion}}</div>
+</div>
+
+<h2 id="ngFor">template ngForOf Heroes</h2>
+<ng-template ngFor let-hero [ngForOf]="heroes" let-index="index">
+    <div>({{index}}) {{hero.name}}</div>
+    <div>{{'(' + index + ')' + ' ' + hero.name}}</div>
+    <div>{{hero.emotion ? hero.emotion : '-'}}</div>
+</ng-template>

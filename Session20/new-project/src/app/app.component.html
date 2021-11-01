@@ -1,0 +1,12 @@
+<app-komponen1 [message] = "parentMessage" (newItemEvent)="addItemInParent($event)"></app-komponen1>
+<div *ngFor="let item of items">{{item}}</div>
+<app-overview></app-overview>
+<app-data-binding></app-data-binding>
+<app-directives></app-directives>
+
+<br/>
+<h1>Increase & decreases number operation</h1>
+<app-button (counterEvent)="increase()" [operation]="increaseSymbol"></app-button>
+<app-button (counterEvent)="decrease()" [operation]="decreaseSymbol"></app-button>
+<app-button (counterEvent)="reset()" [operation]="resetStr"></app-button>
+<p>{{counter}}</p>

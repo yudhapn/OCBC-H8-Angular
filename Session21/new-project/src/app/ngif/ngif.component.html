@@ -1,0 +1,14 @@
+<h2>ngIf - will be shown if value true</h2>
+<p *ngIf="isLoggedIn">You have logged in.</p>
+<p *ngIf="isLoggedIn && currentUser">
+    Hello, {{ currentUser.username }}
+</p>
+
+<p *ngIf="nullValue">
+    Will not be shown, because it is null
+</p>
+
+<h2>ngIf - Case 2</h2>
+<p>Hero Detail is here</p>
+<div>{{hero.id}} - {{hero.name}} - {{hero.emotion}}</div>
+<hr>

@@ -1,0 +1,11 @@
+<h1>ngIf - will be shown if value true</h1>
+
+<input type="text" [(ngModel)] = "username"/>
+<br/>
+<input type="password" [(ngModel)] = "password"/>
+<br/>
+<button (click)="login()">Login</button>
+<p>{{ message }}</p>
+<p *ngIf="isLoggedIn || currentUser">Hello, {{currentUser.username}}</p>
+
+<p *ngIf="nullValue">Will not be shown, because it is null</p>

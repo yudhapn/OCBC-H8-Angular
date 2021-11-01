@@ -1,0 +1,8 @@
+<h1>Two-way Binding</h1>
+<div id="two-way-1">
+    <p>Decrypted Password: {{ decryptedPassword }}</p>
+    <label>Masukkan Pesan: <input #password [(ngModel)]="decryptedPassword" /></label>
+    <button (click)="encryptPassword(password.value)">Encrypt Password</button>
+    <p>Encrypted Password: {{ encryptedPassword }}</p>
+</div>
+<!-- (ngModelChange) ="changeMessage($event)" -->
